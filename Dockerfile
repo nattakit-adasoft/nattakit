@@ -1,4 +1,6 @@
 FROM php:7.3-apache
+RUN docker-php-ext-install xdebug
+RUN docker-php-ext-enable xdebug
 # Install Dependencies
 RUN apt-get update && apt-get install -y locales unixodbc libgss3 odbcinst \
     devscripts debhelper dh-exec dh-autoreconf libreadline-dev libltdl-dev \
@@ -30,6 +32,6 @@ RUN apt-get install -y \
   ENV TZ=Asia/Bangkok
   RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-STOPSIGNAL WINCH
+
 COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
 COPY ./app .
