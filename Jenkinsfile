@@ -1,4 +1,4 @@
-def githubRepo = 'https://github.com/naleruto1234/naleruto1234.git'
+def githubRepo = 'https://github.com/nattakit-adasoft/nattakit.git'
 def githubBranch = 'master'
 
 def dockerRepo = 'naleruto/webserver-ada'
