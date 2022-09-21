@@ -45,7 +45,7 @@ pipeline
                 echo 'Run Container...'
                 script
                 {
-                        bat 'docker run -d -p 8886:80 naleruto/webserver-ada'
+                        bat 'docker run -d -p 8889:80 naleruto/webserver-ada'
                 }
             }
         }
