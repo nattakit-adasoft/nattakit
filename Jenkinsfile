@@ -1,5 +1,5 @@
 def githubRepo = 'https://github.com/nattakit-adasoft/nattakit.git'
-def githubBranch = 'master'
+def githubBranch = 'main'
 
 def dockerRepo = 'naleruto/webserver-ada'
 
