@@ -54,42 +54,42 @@ pipeline
 
 
 
-        stage('Test Container')
-        {
-            steps
-            {
-                echo 'Test Container...'
+    //     stage('Test Container')
+    //     {
+    //         steps
+    //         {
+    //             echo 'Test Container...'
               
-            }
-        }
+    //         }
+    //     }
 
 
-       stage('Stop Container')
-        {
-            steps
-            {
-                echo 'Stop Container...'
-                script
-                {
-                        bat 'docker stop nattakit-web'
+    //    stage('Stop Container')
+    //     {
+    //         steps
+    //         {
+    //             echo 'Stop Container...'
+    //             script
+    //             {
+    //                     bat 'docker stop nattakit-web'
 
-                }
-            }
-        }
+    //             }
+    //         }
+    //     }
 
 
-       stage('Remove Container')
-        {
-            steps
-            {
-                echo 'Remove Container...'
-                script
-                {
-                        bat 'docker rm nattakit-web'
+    //    stage('Remove Container')
+    //     {
+    //         steps
+    //         {
+    //             echo 'Remove Container...'
+    //             script
+    //             {
+    //                     bat 'docker rm nattakit-web'
 
-                }
-            }
-        }
+    //             }
+    //         }
+    //     }
 
 
         // stage('Deploy Image') {
