@@ -39,6 +39,31 @@ pipeline
         }
 
 
+
+        stage('Run Container')
+        {
+            steps
+            {
+                echo 'Run Container...'
+                script
+                {
+                        bat 'docker run -d --name nattakit-web -p 8889:80 naleruto/webserver-ada'
+                }
+            }
+        }
+
+
+
+        stage('Test Container')
+        {
+            steps
+            {
+                echo 'Test Container...'
+              
+            }
+        }
+
+
        stage('Stop Container')
         {
             steps
@@ -66,17 +91,6 @@ pipeline
             }
         }
 
-        stage('Run Container')
-        {
-            steps
-            {
-                echo 'Run Container...'
-                script
-                {
-                        bat 'docker run -d --name nattakit-web -p 8889:80 naleruto/webserver-ada'
-                }
-            }
-        }
 
         // stage('Deploy Image') {
         //     steps{
