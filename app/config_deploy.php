@@ -88,7 +88,3 @@ define('MQ_Sale_VHOST',$_ENV['MQ_Sale_VHOST']);
 define('MQ_Sale_QUEUES',$_ENV['MQ_Sale_QUEUES']);
 define('MQ_Sale_EXCHANGE',$_ENV['MQ_Sale_EXCHANGE']);
 define('MQ_Sale_PORT', $_ENV['MQ_Sale_PORT']);
-
-
-$aLastVersion = file(FCPATH.'version_deploy.txt');
-define('VERSION_DEPLOY',$aLastVersion[0]);
