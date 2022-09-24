@@ -1,14 +1,14 @@
 def githubRepo = 'https://github.com/nattakit-adasoft/nattakit.git'
 def githubBranch = 'main'
 
-def dockerRepo = 'naleruto/webserver-ada'
+def dockerRepo = 'naleruto/ada-webserver'
 
 pipeline
 {
     agent any
     environment
     {
-        imagename = "naleruto/webserver-ada"
+        imagename = "naleruto/ada-webserver"
         registryCredential = 'naleruto-dockerhub'
         dockerImage = ''
     }
@@ -47,7 +47,7 @@ pipeline
                 echo 'Run Container...'
                 script
                 {
-                        bat 'docker run -d --name nattakit-web -p 8889:80 naleruto/webserver-ada'
+                        bat 'docker run -d --name nattakit-web -p 8889:80 naleruto/ada-webserver'
                 }
             }
         }

@@ -1,1 +1,4 @@
-Hello Nale test
+Build Containner Nattakit New !!
+<?php
+ phpinfo();
+?>
