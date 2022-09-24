@@ -47,7 +47,7 @@ pipeline
                 echo 'Run Container...'
                 script
                 {
-                        bat 'docker run -d --name nattakit-web -p 8889:80 naleruto/ada-webserver'
+                        bat 'docker run -d --name backoffice-web -p 8889:80 naleruto/ada-webserver'
                 }
             }
         }
