@@ -47,7 +47,7 @@ pipeline
                 echo 'Run Container...'
                 script
                 {
-                        bat 'docker run -d --name backoffice-web -p 8889:80 naleruto/ada-webserver'
+                        bat 'docker run -d --env BASE_TITLE=AdaSiamKubota --env BASE_URL=http://sit.ada-soft.com:8889/ --env BASE_DATABASE=SKC_Fullloop2 --env DATABASE_IP=147.50.143.126,33433 --env DATABASE_USERNAME=sa --env DATABASE_PASSWORD=GvFhk@61 --name backoffice-web -p 8889:80 naleruto/ada-webserver'
                 }
             }
         }
