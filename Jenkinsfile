@@ -106,7 +106,8 @@ pipeline
                 echo 'Test Container...'
                 script
                 {
-                    bat 'cd "C:\ProgramData\Jenkins\.jenkins/workspace/QA automation/robot skc-cr.robot"'
+                    bat 'cd "C:\ProgramData\Jenkins\.jenkins\workspace\QA automation\"'
+                    bat 'robot skc-cr.robot'
                 }
             }
         }
