@@ -19,7 +19,7 @@ Login_SC
     type    id=oetUsername    009
     type    id=oetPassword    123456
     click    xpath=//button[@id='obtLOGConfirmLogin']/span
-    Wait Until Page Contains    AdaSoft    50
+    Wait Until Page Contains    AdaSoft    120
     ${response}    Get Text    xpath=//*[@id="spnCompanyName"]
     Should Be Equal As Strings    ${response}    AdaSoft
     [Teardown]    Close Browser
