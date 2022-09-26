@@ -99,16 +99,38 @@ pipeline
 
 
 
-        stage('Test Container')
-        {
-            steps
-            {
-                echo 'Test Container...'
-                script
-                {
-                    // bat 'cd "C:/ProgramData/Jenkins/.jenkins/workspace/QA automation"'
-                    bat 'robot skc-cr.robot'
-                }
+        // stage('Test Container')
+        // {
+        //     steps
+        //     {
+        //         echo 'Test Container...'
+        //         script
+        //         {
+        //             // bat 'cd "C:/ProgramData/Jenkins/.jenkins/workspace/QA automation"'
+        //             bat 'robot skc-cr.robot'
+        //         }
+        //     }
+        // }
+
+        stage('Tests Container') {
+
+            steps {
+                echo 'Testing...'
+                script {
+                step(
+                    [
+                    $class                    : 'RobotPublisher',
+                    outputPath                : '',
+                    outputFileName            : "*.xml",
+                    reportFileName            : "report.html",
+                    logFileName               : "log.html",
+                    disableArchiveOutput      : false,
+                    passThreshold             : 100,
+                    unstableThreshold         : 95.0,
+                    otherFiles                : "*.png"
+                    ]
+                )
+                }  
             }
         }
 
