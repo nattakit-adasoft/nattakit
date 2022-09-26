@@ -117,17 +117,16 @@ pipeline
             steps {
                 echo 'Testing...'
                 script {
+                      bat 'robot skc-cr.robot'
                 step(
                     [
-                    $class                    : 'RobotPublisher',
-                    outputPath                : '',
-                    outputFileName            : "*.xml",
-                    reportFileName            : "report.html",
-                    logFileName               : "log.html",
-                    disableArchiveOutput      : false,
-                    passThreshold             : 100,
-                    unstableThreshold         : 95.0,
-                    otherFiles                : "*.png"
+                        $class : 'RobotPublisher',
+                        outputPath : '',
+                        outputFileName : "*.xml",
+                        disableArchiveOutput : false,
+                        passThreshold : 100,
+                        unstableThreshold: 95.0,
+                        otherFiles : "*.png",
                     ]
                 )
                 }  
