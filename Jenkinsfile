@@ -121,7 +121,7 @@ pipeline
                 step(
                     [
                         $class : 'RobotPublisher',
-                        outputPath : '',
+                        outputPath : 'C:\ProgramData\Jenkins\.jenkins\workspace\nattakit',
                         outputFileName : "*.xml",
                         disableArchiveOutput : false,
                         passThreshold : 100,
