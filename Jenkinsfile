@@ -117,7 +117,6 @@ pipeline
             steps {
                 echo 'Testing...'
                 script {
-                    //   bat 'robot skc-cr.robot'
                 step(
                     [
                         $class : 'RobotPublisher',
