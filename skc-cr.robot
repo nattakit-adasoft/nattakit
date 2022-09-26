@@ -17,7 +17,7 @@ Login_SC
     # open    https://dev.ada-soft.com/AdaSiamKubota/login
     Maximize Browser Window
     type    id=oetUsername    009
-    type    id=oetPassword    123456
+    type    id=oetPassword    1234567
     click    xpath=//button[@id='obtLOGConfirmLogin']/span
     Wait Until Page Contains    AdaSoft    50
     ${response}    Get Text    xpath=//*[@id="spnCompanyName"]
@@ -30,7 +30,7 @@ Login_FC
     # open    https://dev.ada-soft.com/AdaSiamKubota/login
     Maximize Browser Window
     type    id=oetUsername    009
-    type    id=oetPassword    123456789
+    type    id=oetPassword    1234567897
     click    xpath=//button[@id='obtLOGConfirmLogin']/span
     Wait Until Element Is Visible    xpath=//*[@id="ospUsrOrPwNotCorrect"]    20
     Wait Until Page Contains    ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง    50
